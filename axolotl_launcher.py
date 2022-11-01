@@ -40,3 +40,39 @@ LOG = logging.getLogger("axolotl.cli.train")
 
 def load_cfg(config: Path = Path("examples/"), **kwargs):
     # load the config from the yaml file
+    with open(config, encoding="utf-8") as file:
+        cfg = yaml.safe_load(file)
+    cfg["axolotl_config_path"] = config
+    # if there are any options passed in the cli, if it is something that seems valid from the yaml,
+    # then overwrite the value
+    cfg_keys = cfg.keys()
+    for k, _ in kwargs.items():
+        # if not strict, allow writing to cfg even if it's not in the yml already
+        if k in cfg_keys or not cfg.strict:
+            # handle booleans
+            if isinstance(cfg[k], bool):
+                cfg[k] = bool(kwargs[k])
+            else:
+                cfg[k] = kwargs[k]
+    return cfg
+
+
+def dump_config(parsed_cfg):
+    # dump config to yaml file
+    with open("dumped_config.yaml", "w") as file:
+        print(f"Dumping config to dumped_config.yaml: {type(parsed_cfg)}")
+        yaml_config = yaml.dump(parsed_cfg, file)
+
+def do_cli(config_fname: Path = Path("examples/"), **kwargs):
+    # pylint: disable=duplicate-code
+    parsed_cfg = load_cfg(config_fname, **kwargs)
+
+    ddp = int(os.environ.get("RANK", -1)) != -1  # is this a ddp run?
+    
+    if ddp:
+        from torch.distributed import init_process_group
+        init_process_group(backend="nccl")
+        if int(os.environ["RANK"]) == 0:
+            print(f"We are in rank {os.environ['RANK']}, initializing wandb")
+            wandb.init(project=parsed_cfg["wandb_project"], 
+                       entity=parsed_cfg["wandb_entity"], 
