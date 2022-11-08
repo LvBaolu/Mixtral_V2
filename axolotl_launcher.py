@@ -76,3 +76,29 @@ def do_cli(config_fname: Path = Path("examples/"), **kwargs):
             print(f"We are in rank {os.environ['RANK']}, initializing wandb")
             wandb.init(project=parsed_cfg["wandb_project"], 
                        entity=parsed_cfg["wandb_entity"], 
+                       config={"axolotl_config": parsed_cfg})
+            parsed_cfg = wandb.config.axolotl_config
+            dump_config(parsed_cfg)
+            torch.distributed.barrier()
+
+        # we are going to wait for rank 0 to finish writing the config and re-read it
+        else:
+            torch.distributed.barrier()
+            parsed_cfg = load_cfg("dumped_config.yaml", **kwargs)       
+    else:
+        wandb.init(project=parsed_cfg["wandb_project"], 
+                   entity=parsed_cfg["wandb_entity"], 
+                   config={"axolotl_config": parsed_cfg})
+        
+        parsed_cfg = wandb.config.axolotl_config
+        
+    parsed_cfg = DictDefault(parsed_cfg)
+    validate_config(parsed_cfg)
+    prepare_optim_env(parsed_cfg)
+    normalize_config(parsed_cfg)
+    # setup_wandb_env_vars(cfg)
+    print(f"*********Parsed Args********* \n{parsed_cfg}\n***************************")
+    print_axolotl_text_art()
+    check_accelerate_default_config()
+    check_user_token()
+    parser = transformers.HfArgumentParser((TrainerCliArgs))
