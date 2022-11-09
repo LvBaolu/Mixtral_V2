@@ -48,3 +48,27 @@ def train(
     accelerator = Accelerator()
     # load the tokenizer first
     LOG.debug(
+        f"loading tokenizer... {cfg.tokenizer_config or cfg.base_model_config}",
+        main_process_only=True,
+    )
+
+    if accelerator.is_main_process:
+        import wandb
+        wandb.init(project=cfg.wandb_project,
+                entity=cfg.wandb_entity,
+                config=cfg)
+
+    tokenizer = load_tokenizer(cfg)
+
+    train_dataset = dataset_meta.train_dataset
+    eval_dataset = dataset_meta.eval_dataset
+    total_num_steps = dataset_meta.total_num_steps
+
+    # Load the model and tokenizer
+    msg = "loading model"
+    if cfg.adapter:
+        msg += " and peft_config..."
+    LOG.debug(msg)
+    model, peft_config = load_model(cfg, tokenizer, inference=cli_args.inference)
+
+    safe_serialization = cfg.save_safetensors is True
