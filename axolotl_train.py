@@ -138,3 +138,32 @@ def train(
     else:
         trainer.train(resume_from_checkpoint=resume_from_checkpoint)
     post_train_hooks(cfg, trainer)
+
+    LOG.info(f"Training Completed!!! Saving pre-trained model to {cfg.output_dir}")
+
+    # post training
+    for name, module in model.named_modules():
+        if hasattr(module, "_post_training"):
+            module._post_training(model, name)  # pylint: disable=protected-access
+
+    if trainer.is_fsdp_enabled:
+        trainer.accelerator.state.fsdp_plugin.set_state_dict_type("FULL_STATE_DICT")
+        LOG.info("Set FSDP state dict type to FULL_STATE_DICT for saving.")
+
+    if cfg.relora_steps:
+        if cfg.adapter == "lora" and not (cfg.load_in_4bit or cfg.load_in_8bit):
+            model = model.merge_and_unload()
+        else:
+            # final model weights have already been saved by `ReLoRACallback.on_train_end`
+            return model, tokenizer
+
+    # TODO do we need this fix? https://huggingface.co/docs/accelerate/usage_guides/fsdp#saving-and-loading
+    # only save on rank 0, otherwise it corrupts output on multi-GPU when multiple processes attempt to write the same file
+    if cfg.fsdp:
+        trainer.save_model(cfg.output_dir)
+    elif cfg.deepspeed and is_deepspeed_zero3_enabled():
+        # Copied over from: https://github.com/huggingface/accelerate/blob/5ae611118057232f441055f7ef9ba0b0f2b8d533/docs/source/usage_guides/deepspeed.md#saving-and-loading
+        trainer.accelerator.wait_for_everyone()
+        unwrapped_model = trainer.accelerator.unwrap_model(trainer.model_wrapped)
+
+        # Saves the whole/unpartitioned fp16 model when in ZeRO Stage-3 to the output directory if
