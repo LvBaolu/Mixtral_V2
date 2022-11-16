@@ -167,3 +167,33 @@ def train(
         unwrapped_model = trainer.accelerator.unwrap_model(trainer.model_wrapped)
 
         # Saves the whole/unpartitioned fp16 model when in ZeRO Stage-3 to the output directory if
+        # `stage3_gather_16bit_weights_on_model_save` is True in DeepSpeed Config file or
+        # `zero3_save_16bit_model` is True in DeepSpeed Plugin.
+        # For Zero Stages 1 and 2, models are saved as usual in the output directory.
+        # The model name saved is `pytorch_model.bin`
+        unwrapped_model.save_pretrained(
+            cfg.output_dir,
+            is_main_process=trainer.accelerator.is_main_process,
+            save_function=trainer.accelerator.save,
+            state_dict=trainer.accelerator.get_state_dict(trainer.model_wrapped),
+        )
+    elif cfg.local_rank == 0:
+        if cfg.flash_optimum:
+            model = BetterTransformer.reverse(model)
+
+        model.save_pretrained(cfg.output_dir, safe_serialization=safe_serialization)
+
+    if not cfg.hub_model_id:
+        trainer.create_model_card(model_name=cfg.output_dir.lstrip("./"))
+
+    return model, tokenizer
+
+
+def pretrain_hooks(_cfg, _trainer):
+    """
+    Run hooks right before kicking off the training
+    :param cfg:
+    :param trainer:
+    :return:
+    """
+
