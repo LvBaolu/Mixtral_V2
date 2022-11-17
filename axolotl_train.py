@@ -197,3 +197,11 @@ def pretrain_hooks(_cfg, _trainer):
     :return:
     """
 
+
+def post_train_hooks(_cfg, _trainer):
+    """
+    Run hooks right after training completes
+    :param cfg:
+    :param trainer:
+    :return:
+    """
