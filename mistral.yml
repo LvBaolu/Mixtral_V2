@@ -1,3 +1,4 @@
 base_model: mistralai/Mistral-7B-v0.1
 model_type: MistralForCausalLM
-tokenizer_type: 
+tokenizer_type: LlamaTokenizer
+is_mistral_derived_
