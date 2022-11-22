@@ -19,4 +19,7 @@ lora_model_dir:
 
 sequence_len: 1024
 sample_packing: true
-pad_to_sequence_len: 
+pad_to_sequence_len: true
+max_steps: 100
+
+lora_r: 
