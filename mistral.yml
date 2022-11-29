@@ -27,4 +27,6 @@ lora_alpha: 16
 lora_dropout: 0.05
 lora_target_linear: true
 lora_fan_in_fan_out:
-lora_targe
+lora_target_modules:
+  - gate_proj
+  - down_pro
