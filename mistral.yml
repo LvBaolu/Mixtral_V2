@@ -29,4 +29,7 @@ lora_target_linear: true
 lora_fan_in_fan_out:
 lora_target_modules:
   - gate_proj
-  - down_pro
+  - down_proj
+  - up_proj
+  - q_proj
+  - v_pr
