@@ -32,4 +32,8 @@ lora_target_modules:
   - down_proj
   - up_proj
   - q_proj
-  - v_pr
+  - v_proj
+  - k_proj
+  - o_proj
+
+wandb_projec
