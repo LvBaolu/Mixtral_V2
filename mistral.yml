@@ -36,4 +36,5 @@ lora_target_modules:
   - k_proj
   - o_proj
 
-wandb_projec
+wandb_project: axolotl_debug
+wandb_entity: capecape
