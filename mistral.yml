@@ -38,3 +38,6 @@ lora_target_modules:
 
 wandb_project: axolotl_debug
 wandb_entity: capecape
+wandb_watch:
+wandb_name:
+wandb_log_m
