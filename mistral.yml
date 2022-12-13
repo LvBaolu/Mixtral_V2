@@ -44,4 +44,5 @@ wandb_log_model:
 
 gradient_accumulation_steps: 4
 micro_batch_size: 2
-num_ep
+num_epochs: 1
+optimizer: adamw_b
