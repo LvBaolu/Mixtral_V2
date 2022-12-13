@@ -49,4 +49,6 @@ optimizer: adamw_bnb_8bit
 lr_scheduler: cosine
 learning_rate: 0.0002
 
-trai
+train_on_inputs: false
+group_by_length: false
+bf16: 
