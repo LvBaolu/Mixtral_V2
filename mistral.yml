@@ -56,4 +56,5 @@ fp16: false
 tf32: false
 
 gradient_checkpointing: true
-early_st
+early_stopping_patience:
+resu
