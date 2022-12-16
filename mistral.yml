@@ -64,4 +64,7 @@ xformers_attention:
 flash_attention: true
 
 loss_watchdog_threshold: 5.0
-loss_watchd
+loss_watchdog_patience: 3
+
+warmup_steps: 10
+evals_per
