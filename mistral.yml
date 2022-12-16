@@ -60,4 +60,7 @@ early_stopping_patience:
 resume_from_checkpoint:
 local_rank:
 logging_steps: 1
-xformers_attentio
+xformers_attention:
+flash_attention: true
+
+loss
