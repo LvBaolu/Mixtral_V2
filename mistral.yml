@@ -63,4 +63,5 @@ logging_steps: 1
 xformers_attention:
 flash_attention: true
 
-loss
+loss_watchdog_threshold: 5.0
+loss_watchd
