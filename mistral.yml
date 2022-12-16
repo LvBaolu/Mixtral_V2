@@ -59,4 +59,5 @@ gradient_checkpointing: true
 early_stopping_patience:
 resume_from_checkpoint:
 local_rank:
-l
+logging_steps: 1
+xformers_attentio
