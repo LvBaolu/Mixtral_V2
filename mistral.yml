@@ -67,4 +67,6 @@ loss_watchdog_threshold: 5.0
 loss_watchdog_patience: 3
 
 warmup_steps: 10
-evals_per
+evals_per_epoch: 4
+eval_table_size:
+eval
