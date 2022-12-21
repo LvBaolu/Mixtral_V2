@@ -3,3 +3,42 @@ base_model: mistralai/Mixtral-8x7B-v0.1
 model_type: AutoModelForCausalLM
 tokenizer_type: LlamaTokenizer
 trust_remote_code: true
+
+load_in_8bit: false
+load_in_4bit: true
+strict: false
+
+datasets:
+  - path: Open-Orca/SlimOrca
+    type: sharegpt
+    conversation: chatml
+dataset_prepared_path: last_run_prepared
+val_set_size: 0.005
+output_dir: /wb-mixtral/slimorca-mixstral-8x7b
+save_total_limit: 1
+hub_model_id:
+dataloader_num_workers: 8
+dataloader_prefetch_factor: 4
+dataloader_pin_memory: true
+
+adapter: qlora
+lora_model_dir:
+
+sequence_len: 8192
+sample_packing: true
+pad_to_sequence_len: true
+
+lora_r: 64
+lora_alpha: 32
+lora_dropout: 0.1
+lora_target_linear: true
+lora_fan_in_fan_out:
+lora_modules_to_save:
+  - lm_head
+  - embed_tokens
+#lora_target_modules:
+#  - gate
+#  - q_proj
+#  - k_proj
+#  - v_proj
+#  - o_proj
