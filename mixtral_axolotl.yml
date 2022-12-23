@@ -75,3 +75,16 @@ local_rank:
 logging_steps: 1
 xformers_attention:
 flash_attention: true
+
+warmup_steps: 100
+eval_steps: 0.05
+save_steps: 0.25
+debug:
+deepspeed:
+weight_decay: 0.1
+fsdp:
+fsdp_config:
+special_tokens:
+  eos_token: "<|im_end|>"
+tokens:
+  - "<|im_start|>"
