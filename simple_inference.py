@@ -39,3 +39,10 @@ def main(config):
     inputs = tokenizer(config.text, return_tensors="pt").to(0)
     t = time.perf_counter()
     outputs = model.generate(**inputs, max_new_tokens=config.max_new_tokens)
+    tf = time.perf_counter() - t
+    print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+    print(f"Total Tokens {len(outputs[0])}\nTime taken: {tf:.2f}s\ntokens/s: {len(outputs[0])/tf:.2f}")
+
+if __name__ == "__main__":
+    parse_args(config)
+    main(config)
