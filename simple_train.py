@@ -2,4 +2,5 @@ from types import SimpleNamespace
 
 import wandb
 
-import torc
+import torch
+from transformers import AutoModelFo
