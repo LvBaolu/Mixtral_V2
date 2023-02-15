@@ -5,4 +5,5 @@ import wandb
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments
 from trl import SFTTrainer
-from datasets import load_d
+from datasets import load_dataset
+from peft import LoraConfig, ge
