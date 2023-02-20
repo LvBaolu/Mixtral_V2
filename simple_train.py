@@ -9,4 +9,7 @@ from datasets import load_dataset
 from peft import LoraConfig, get_peft_model
 from accelerate import Accelerator
 
-from utils import parse_args, create_alpaca_prompt_with_response, debug_trainer
+from utils import parse_args, create_alpaca_prompt_with_response, debug_trainer_data
+
+WANDB_PROJECT = "mixtral"
+WANDB_E
