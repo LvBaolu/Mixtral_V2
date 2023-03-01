@@ -13,4 +13,7 @@ from utils import parse_args, create_alpaca_prompt_with_response, debug_trainer_
 
 WANDB_PROJECT = "mixtral"
 WANDB_ENTITY = "capecape"
-WANDB_TAGS = N
+WANDB_TAGS = None
+
+config = SimpleNamespace(
+    
