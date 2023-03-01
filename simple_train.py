@@ -12,4 +12,5 @@ from accelerate import Accelerator
 from utils import parse_args, create_alpaca_prompt_with_response, debug_trainer_data
 
 WANDB_PROJECT = "mixtral"
-WANDB_E
+WANDB_ENTITY = "capecape"
+WANDB_TAGS = N
