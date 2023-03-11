@@ -16,4 +16,4 @@ WANDB_ENTITY = "capecape"
 WANDB_TAGS = None
 
 config = SimpleNamespace(
-    
+    dataset_id = "c-s-ale/
