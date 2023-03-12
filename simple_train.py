@@ -17,4 +17,5 @@ WANDB_TAGS = None
 
 config = SimpleNamespace(
     dataset_id = "c-s-ale/alpaca-gpt4-data",
-    split = "
+    split = "train",
+    model_id = "mistralai/Mixtra
