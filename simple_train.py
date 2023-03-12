@@ -16,4 +16,5 @@ WANDB_ENTITY = "capecape"
 WANDB_TAGS = None
 
 config = SimpleNamespace(
-    dataset_id = "c-s-ale/
+    dataset_id = "c-s-ale/alpaca-gpt4-data",
+    split = "
