@@ -22,4 +22,5 @@ config = SimpleNamespace(
     batch_size = 1, # what my GPU can handle, depends on how many layers are we training
     effective_batch_size = 8, # batch size for gradient accumulation
     gradient_checkpointing = False,
-    load_in_
+    load_in_4bit=True,
+    load_in_8bi
