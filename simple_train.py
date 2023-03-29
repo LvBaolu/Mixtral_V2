@@ -23,4 +23,5 @@ config = SimpleNamespace(
     effective_batch_size = 8, # batch size for gradient accumulation
     gradient_checkpointing = False,
     load_in_4bit=True,
-    load_in_8bi
+    load_in_8bit=False,
+    max_seq_leng
