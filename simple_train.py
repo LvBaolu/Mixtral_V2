@@ -30,3 +30,5 @@ config = SimpleNamespace(
     log_model=False,
     # for debug purposes
     max_steps=-1, 
+    debug_data=False,
+)
