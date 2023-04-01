@@ -35,4 +35,5 @@ config = SimpleNamespace(
 
 
 def get_train_args(config, output_dir = "./output/"):
-    training_args = Tra
+    training_args = TrainingArguments(
+        output_dir=output_di
