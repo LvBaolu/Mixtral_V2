@@ -27,4 +27,5 @@ config = SimpleNamespace(
     max_seq_length = 512,
     num_train_epochs = 3, # we do 3 pasess over the dataset.
     lr = 2e-5,
-    lo
+    log_model=False,
+    # for de
