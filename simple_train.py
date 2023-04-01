@@ -32,3 +32,6 @@ config = SimpleNamespace(
     max_steps=-1, 
     debug_data=False,
 )
+
+
+def get_train_args(config, output_dir =
