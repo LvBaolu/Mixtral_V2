@@ -24,4 +24,5 @@ config = SimpleNamespace(
     gradient_checkpointing = False,
     load_in_4bit=True,
     load_in_8bit=False,
-    max_seq_leng
+    max_seq_length = 512,
+    num_train_epoch
