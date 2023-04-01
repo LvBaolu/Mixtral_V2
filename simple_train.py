@@ -34,4 +34,5 @@ config = SimpleNamespace(
 )
 
 
-def get_train_args(config, output_dir =
+def get_train_args(config, output_dir = "./output/"):
+    training_args = Tra
