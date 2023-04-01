@@ -25,4 +25,4 @@ config = SimpleNamespace(
     load_in_4bit=True,
     load_in_8bit=False,
     max_seq_length = 512,
-    num_train_epoch
+    num_train_epochs = 3, # we do 3 pasess over the d
