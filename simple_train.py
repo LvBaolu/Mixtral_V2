@@ -36,4 +36,5 @@ config = SimpleNamespace(
 
 def get_train_args(config, output_dir = "./output/"):
     training_args = TrainingArguments(
-        output_dir=output_di
+        output_dir=output_dir,
+        per_device_train_batch_siz
