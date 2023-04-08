@@ -41,4 +41,4 @@ def get_train_args(config, output_dir = "./output/"):
         per_device_eval_batch_size=max(config.batch_size//2, 1),
         bf16=True,
         learning_rate=config.lr,
- 
+        lr_scheduler_type="c
