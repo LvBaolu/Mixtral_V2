@@ -38,4 +38,6 @@ def get_train_args(config, output_dir = "./output/"):
     training_args = TrainingArguments(
         output_dir=output_dir,
         per_device_train_batch_size=config.batch_size,
-        per_device_eval_batch_size=max(config.b
+        per_device_eval_batch_size=max(config.batch_size//2, 1),
+        bf16=True,
+   
