@@ -42,4 +42,5 @@ def get_train_args(config, output_dir = "./output/"):
         bf16=True,
         learning_rate=config.lr,
         lr_scheduler_type="cosine",
-        warmup_ratio=0.1
+        warmup_ratio=0.1,
+        max_steps=config.max_ste
