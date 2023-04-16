@@ -44,4 +44,5 @@ def get_train_args(config, output_dir = "./output/"):
         lr_scheduler_type="cosine",
         warmup_ratio=0.1,
         max_steps=config.max_steps,
-        gradient_accumulation_steps=config.gradient_accumul
+        gradient_accumulation_steps=config.gradient_accumulation_steps,
+        gradient_chec
