@@ -45,4 +45,5 @@ def get_train_args(config, output_dir = "./output/"):
         warmup_ratio=0.1,
         max_steps=config.max_steps,
         gradient_accumulation_steps=config.gradient_accumulation_steps,
-        gradient_checkpointing=config.gradient_checkpo
+        gradient_checkpointing=config.gradient_checkpointing,
+        gradient_checkpointing_kw
