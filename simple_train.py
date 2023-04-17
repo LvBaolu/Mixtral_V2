@@ -47,4 +47,4 @@ def get_train_args(config, output_dir = "./output/"):
         gradient_accumulation_steps=config.gradient_accumulation_steps,
         gradient_checkpointing=config.gradient_checkpointing,
         gradient_checkpointing_kwargs={"use_reentrant": False},
- 
+        evaluation_strategy="no",
