@@ -53,4 +53,7 @@ def get_train_args(config, output_dir = "./output/"):
         logging_steps=1,
         save_strategy="no",
     )
-    retur
+    return training_args
+
+def main(config):
+ 
