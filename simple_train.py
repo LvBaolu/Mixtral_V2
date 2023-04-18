@@ -56,4 +56,4 @@ def get_train_args(config, output_dir = "./output/"):
     return training_args
 
 def main(config):
- 
+    accelerator = Accelerator()
