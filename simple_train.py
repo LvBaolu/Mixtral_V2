@@ -49,4 +49,5 @@ def get_train_args(config, output_dir = "./output/"):
         gradient_checkpointing_kwargs={"use_reentrant": False},
         evaluation_strategy="no",
         # logging strategies
-    
+        logging_strategy="steps",
+       
