@@ -57,3 +57,5 @@ def get_train_args(config, output_dir = "./output/"):
 
 def main(config):
     accelerator = Accelerator()
+
+    if accelerator.is_main_proce
