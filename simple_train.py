@@ -50,4 +50,5 @@ def get_train_args(config, output_dir = "./output/"):
         evaluation_strategy="no",
         # logging strategies
         logging_strategy="steps",
-       
+        logging_steps=1,
+    
