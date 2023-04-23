@@ -63,4 +63,5 @@ def main(config):
             project=WANDB_PROJECT, 
             entity=WANDB_ENTITY, 
             job_type="train",
-       
+            tags=WANDB_TAGS,
+            
