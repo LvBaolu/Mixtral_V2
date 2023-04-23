@@ -61,4 +61,6 @@ def main(config):
     if accelerator.is_main_process:
         wandb.init(
             project=WANDB_PROJECT, 
-            entity=WANDB_ENTITY,
+            entity=WANDB_ENTITY, 
+            job_type="train",
+       
