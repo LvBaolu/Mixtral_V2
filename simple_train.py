@@ -64,4 +64,6 @@ def main(config):
             entity=WANDB_ENTITY, 
             job_type="train",
             tags=WANDB_TAGS,
-            
+            config=config)
+
+    # some sane d
