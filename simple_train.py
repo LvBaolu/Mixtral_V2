@@ -67,4 +67,4 @@ def main(config):
             config=config)
 
     # some sane defaults computations
-    config.gradient_accumulation
+    config.gradient_accumulation_steps = (1024 // config.max_seq_len
