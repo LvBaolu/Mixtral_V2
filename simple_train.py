@@ -67,4 +67,4 @@ def main(config):
             config=config)
 
     # some sane defaults computations
-    
+    config.gradient_accumulation
