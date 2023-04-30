@@ -66,4 +66,5 @@ def main(config):
             tags=WANDB_TAGS,
             config=config)
 
-    # some sane d
+    # some sane defaults computations
+    
