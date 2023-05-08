@@ -69,4 +69,4 @@ def main(config):
     # some sane defaults computations
     config.gradient_accumulation_steps = (1024 // config.max_seq_length) * config.effective_batch_size // config.batch_size
     config.tokens_per_step = 8 * config.max_seq_length * config.batch_size * config.gradient_accumulation_steps
-    print(f"\nWe are train
+    print(f"\nWe are training for {config.max_steps} steps with
