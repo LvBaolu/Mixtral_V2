@@ -70,4 +70,6 @@ def main(config):
     config.gradient_accumulation_steps = (1024 // config.max_seq_length) * config.effective_batch_size // config.batch_size
     config.tokens_per_step = 8 * config.max_seq_length * config.batch_size * config.gradient_accumulation_steps
     print(f"\nWe are training for {config.max_steps} steps with an effective batch size of {config.effective_batch_size} and a gradient accumulation of {config.gradient_accumulation_steps} steps.")
-    print(f"Tokens per step max_seq_len * bs * grad_accum_steps: {config.tok
+    print(f"Tokens per step max_seq_len * bs * grad_accum_steps: {config.tokens_per_step}\n")
+    
+    # i
