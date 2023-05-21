@@ -72,4 +72,6 @@ def main(config):
     print(f"\nWe are training for {config.max_steps} steps with an effective batch size of {config.effective_batch_size} and a gradient accumulation of {config.gradient_accumulation_steps} steps.")
     print(f"Tokens per step max_seq_len * bs * grad_accum_steps: {config.tokens_per_step}\n")
     
-    # i
+    # inject HP
+    # config = wandb.config
+
