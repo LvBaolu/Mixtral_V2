@@ -75,4 +75,4 @@ def main(config):
     # inject HP
     # config = wandb.config
 
-    train_dataset = load_da
+    train_dataset = load_dataset(config.dataset_id, split=c
