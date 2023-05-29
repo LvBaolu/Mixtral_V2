@@ -77,4 +77,5 @@ def main(config):
 
     train_dataset = load_dataset(config.dataset_id, split=config.split)
 
-    model = AutoModelForCausalLM.from_pretrained
+    model = AutoModelForCausalLM.from_pretrained(
+        config.model_id
