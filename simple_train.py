@@ -80,3 +80,4 @@ def main(config):
     model = AutoModelForCausalLM.from_pretrained(
         config.model_id,
         torch_dtype=torch.bfloat16,
+        load_in_4bit=config.load_in_4bi
