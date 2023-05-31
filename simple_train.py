@@ -81,4 +81,7 @@ def main(config):
         config.model_id,
         torch_dtype=torch.bfloat16,
         load_in_4bit=config.load_in_4bit,
-        load_in_8bit=config.
+        load_in_8bit=config.load_in_8bit,
+    )
+
+    peft_config 
