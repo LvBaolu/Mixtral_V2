@@ -85,4 +85,4 @@ def main(config):
     )
 
     peft_config = LoraConfig(
-            r=6
+            r=64,  # the rank of the LoRA ma
