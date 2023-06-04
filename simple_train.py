@@ -84,4 +84,5 @@ def main(config):
         load_in_8bit=config.load_in_8bit,
     )
 
-    peft_config 
+    peft_config = LoraConfig(
+            r=6
