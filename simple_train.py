@@ -86,4 +86,5 @@ def main(config):
 
     peft_config = LoraConfig(
             r=64,  # the rank of the LoRA matrices
-            lora_alpha=
+            lora_alpha=16, # the weight
+         
