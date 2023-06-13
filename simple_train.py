@@ -87,4 +87,4 @@ def main(config):
     peft_config = LoraConfig(
             r=64,  # the rank of the LoRA matrices
             lora_alpha=16, # the weight
-         
+            lora_dropout=0.1, # dropout to add to th
