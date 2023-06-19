@@ -90,4 +90,4 @@ def main(config):
             lora_dropout=0.1, # dropout to add to the LoRA layers
             bias="none", # add bias to the nn.Linear layers?
             task_type="CAUSAL_LM",
-            target_modules=["q_proj", "
+            target_modules=["q_proj", "k_proj","v_proj","o_proj"], # t
