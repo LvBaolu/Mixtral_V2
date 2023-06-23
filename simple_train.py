@@ -92,4 +92,4 @@ def main(config):
             task_type="CAUSAL_LM",
             target_modules=["q_proj", "k_proj","v_proj","o_proj"], # the name of the layers to add LoRA
         )
-    model = get_peft_mod
+    model = get_peft_model(model, peft_config)
