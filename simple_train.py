@@ -93,3 +93,4 @@ def main(config):
             target_modules=["q_proj", "k_proj","v_proj","o_proj"], # the name of the layers to add LoRA
         )
     model = get_peft_model(model, peft_config)
+    model.print_trainable_parameters(
