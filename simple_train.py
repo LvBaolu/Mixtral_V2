@@ -95,4 +95,5 @@ def main(config):
     model = get_peft_model(model, peft_config)
     model.print_trainable_parameters()
     
-    # override whatever train a
+    # override whatever train args we may need
+    training_args = get
