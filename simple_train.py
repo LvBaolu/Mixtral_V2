@@ -96,4 +96,6 @@ def main(config):
     model.print_trainable_parameters()
     
     # override whatever train args we may need
-    training_args = get
+    training_args = get_train_args(config)
+
+    trainer = SFT
