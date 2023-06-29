@@ -98,4 +98,6 @@ def main(config):
     # override whatever train args we may need
     training_args = get_train_args(config)
 
-    trainer = SFT
+    trainer = SFTTrainer(
+        model,
+    
