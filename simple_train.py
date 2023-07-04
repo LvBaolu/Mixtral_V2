@@ -100,4 +100,5 @@ def main(config):
 
     trainer = SFTTrainer(
         model,
-    
+        train_dataset=train_dataset,
+     
