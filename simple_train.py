@@ -101,4 +101,5 @@ def main(config):
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
-     
+        packing=True,
+        max_seq_length=config
