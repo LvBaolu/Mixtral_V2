@@ -102,4 +102,5 @@ def main(config):
         model,
         train_dataset=train_dataset,
         packing=True,
-        max_seq_length=config
+        max_seq_length=config.max_seq_length,
+        ar
