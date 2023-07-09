@@ -104,4 +104,4 @@ def main(config):
         packing=True,
         max_seq_length=config.max_seq_length,
         args=training_args,
-        f
+        formatting_func=create_alpaca
