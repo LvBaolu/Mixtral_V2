@@ -103,4 +103,5 @@ def main(config):
         train_dataset=train_dataset,
         packing=True,
         max_seq_length=config.max_seq_length,
-        ar
+        args=training_args,
+        f
