@@ -104,4 +104,6 @@ def main(config):
         packing=True,
         max_seq_length=config.max_seq_length,
         args=training_args,
-        formatting_func=create_alpaca
+        formatting_func=create_alpaca_prompt_with_response,
+    )
+    if c
