@@ -107,4 +107,7 @@ def main(config):
         formatting_func=create_alpaca_prompt_with_response,
     )
     if config.debug_data:
-        debug_trainer_data(tra
+        debug_trainer_data(trainer)
+        return
+
+    train
