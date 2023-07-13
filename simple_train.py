@@ -111,4 +111,5 @@ def main(config):
         return
 
     trainer.train()
-    if accelerator.is_main_proc
+    if accelerator.is_main_process:
+        save_path = f"{trai
