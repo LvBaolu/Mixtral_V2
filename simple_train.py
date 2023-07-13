@@ -110,4 +110,5 @@ def main(config):
         debug_trainer_data(trainer)
         return
 
-    train
+    trainer.train()
+    if accelerator.is_main_proc
