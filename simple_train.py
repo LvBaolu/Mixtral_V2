@@ -112,4 +112,4 @@ def main(config):
 
     trainer.train()
     if accelerator.is_main_process:
-        save_path = f"{trai
+        save_path = f"{training_args.output_dir}/{wandb.run.id}_a
