@@ -114,4 +114,5 @@ def main(config):
     if accelerator.is_main_process:
         save_path = f"{training_args.output_dir}/{wandb.run.id}_alpaca"
         trainer.save_model(save_path)
-        print("Saving model as ar
+        print("Saving model as artifact to wandb")
+        if conf
