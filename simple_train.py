@@ -115,4 +115,5 @@ def main(config):
         save_path = f"{training_args.output_dir}/{wandb.run.id}_alpaca"
         trainer.save_model(save_path)
         print("Saving model as artifact to wandb")
-        if conf
+        if config.log_model:
+            model_at = wandb.
