@@ -116,4 +116,5 @@ def main(config):
         trainer.save_model(save_path)
         print("Saving model as artifact to wandb")
         if config.log_model:
-            model_at = wandb.
+            model_at = wandb.Artifact(
+                name =
