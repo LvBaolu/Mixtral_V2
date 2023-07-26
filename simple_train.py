@@ -117,4 +117,5 @@ def main(config):
         print("Saving model as artifact to wandb")
         if config.log_model:
             model_at = wandb.Artifact(
-                name =
+                name = f"{wandb.run.id}_alpaca", 
+   
