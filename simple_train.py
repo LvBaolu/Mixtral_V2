@@ -118,4 +118,4 @@ def main(config):
         if config.log_model:
             model_at = wandb.Artifact(
                 name = f"{wandb.run.id}_alpaca", 
-   
+                type="mod
