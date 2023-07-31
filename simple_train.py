@@ -119,4 +119,4 @@ def main(config):
             model_at = wandb.Artifact(
                 name = f"{wandb.run.id}_alpaca", 
                 type="model",
-                description="Model tr
+                description="Model trained on Alpaca GPT4 dataset",
