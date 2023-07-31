@@ -120,3 +120,4 @@ def main(config):
                 name = f"{wandb.run.id}_alpaca", 
                 type="model",
                 description="Model trained on Alpaca GPT4 dataset",
+                metadata={"finetuned_f
