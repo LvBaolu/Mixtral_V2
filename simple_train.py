@@ -122,4 +122,6 @@ def main(config):
                 description="Model trained on Alpaca GPT4 dataset",
                 metadata={"finetuned_from":config.model_id})
             model_at.add_dir(save_path)
-            wandb.log_artifact(model_a
+            wandb.log_artifact(model_at)
+    
+    accelerator.wa
