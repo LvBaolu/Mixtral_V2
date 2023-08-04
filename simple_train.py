@@ -124,4 +124,6 @@ def main(config):
             model_at.add_dir(save_path)
             wandb.log_artifact(model_at)
     
-    accelerator.wa
+    accelerator.wait_for_everyone()
+
+if __name__ == "__main
