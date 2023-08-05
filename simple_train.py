@@ -126,4 +126,6 @@ def main(config):
     
     accelerator.wait_for_everyone()
 
-if __name__ == "__main
+if __name__ == "__main__":
+    parse_args(config)
+    main(confi
