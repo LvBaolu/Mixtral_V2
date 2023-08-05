@@ -128,4 +128,4 @@ def main(config):
 
 if __name__ == "__main__":
     parse_args(config)
-    main(confi
+    main(config)
