@@ -5,4 +5,6 @@ from transformers import Trainer
 
 def str2bool(v):
     "Fix Argparse to process bools"
-    if isinstance(v,
+    if isinstance(v, bool):
+        return v
+    i
