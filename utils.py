@@ -7,4 +7,4 @@ def str2bool(v):
     "Fix Argparse to process bools"
     if isinstance(v, bool):
         return v
-    i
+    if v.lower() == 'true'
