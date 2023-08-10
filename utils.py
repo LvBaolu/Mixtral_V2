@@ -4,4 +4,5 @@ from ast import literal_eval
 from transformers import Trainer
 
 def str2bool(v):
-    "Fix Argparse to process b
+    "Fix Argparse to process bools"
+    if isinstance(v,
