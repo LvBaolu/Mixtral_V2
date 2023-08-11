@@ -9,4 +9,5 @@ def str2bool(v):
         return v
     if v.lower() == 'true':
         return True
-    elif v.lower() =
+    elif v.lower() == 'false':
+        return Fals
