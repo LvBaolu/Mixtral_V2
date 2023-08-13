@@ -10,4 +10,6 @@ def str2bool(v):
     if v.lower() == 'true':
         return True
     elif v.lower() == 'false':
-        return Fals
+        return False
+    else:
+        raise argparse.
