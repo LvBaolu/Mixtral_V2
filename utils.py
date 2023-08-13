@@ -12,4 +12,5 @@ def str2bool(v):
     elif v.lower() == 'false':
         return False
     else:
-        raise argparse.
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
