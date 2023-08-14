@@ -14,3 +14,5 @@ def str2bool(v):
     else:
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
+def parse_args(config):
+    print
