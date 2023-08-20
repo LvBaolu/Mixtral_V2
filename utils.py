@@ -18,4 +18,4 @@ def parse_args(config):
     print("Running with the following config")
     parser = argparse.ArgumentParser(description='Run training baseline')
     for k,v in config.__dict__.items():
-        p
+        parser.add_argument('--'+k, type=t
