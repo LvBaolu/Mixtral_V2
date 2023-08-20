@@ -16,4 +16,5 @@ def str2bool(v):
 
 def parse_args(config):
     print("Running with the following config")
-    parser = argparse.ArgumentParser(description='Run training 
+    parser = argparse.ArgumentParser(description='Run training baseline')
+    for k,v in con
