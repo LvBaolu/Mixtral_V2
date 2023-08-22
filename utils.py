@@ -19,4 +19,5 @@ def parse_args(config):
     parser = argparse.ArgumentParser(description='Run training baseline')
     for k,v in config.__dict__.items():
         parser.add_argument('--'+k, type=type(v) if type(v) is not bool else str2bool, 
-            
+                            default=v, 
+ 
