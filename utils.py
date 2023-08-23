@@ -20,4 +20,5 @@ def parse_args(config):
     for k,v in config.__dict__.items():
         parser.add_argument('--'+k, type=type(v) if type(v) is not bool else str2bool, 
                             default=v, 
-                           
+                            help=f"Default: {v}")
+    args = vars(parser.parse
