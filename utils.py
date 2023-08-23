@@ -23,4 +23,5 @@ def parse_args(config):
                             help=f"Default: {v}")
     args = vars(parser.parse_args())
     
-    # update con
+    # update config with parsed args
+    fo
