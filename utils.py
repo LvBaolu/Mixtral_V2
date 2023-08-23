@@ -21,4 +21,6 @@ def parse_args(config):
         parser.add_argument('--'+k, type=type(v) if type(v) is not bool else str2bool, 
                             default=v, 
                             help=f"Default: {v}")
-    args = vars(parser.parse
+    args = vars(parser.parse_args())
+    
+    # update con
