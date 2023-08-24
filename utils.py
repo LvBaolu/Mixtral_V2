@@ -24,4 +24,5 @@ def parse_args(config):
     args = vars(parser.parse_args())
     
     # update config with parsed args
-    fo
+    for k, v in args.items():
+   
