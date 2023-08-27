@@ -25,4 +25,5 @@ def parse_args(config):
     
     # update config with parsed args
     for k, v in args.items():
-   
+        try:
+            # attempt to eval
