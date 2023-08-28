@@ -27,4 +27,5 @@ def parse_args(config):
     for k, v in args.items():
         try:
             # attempt to eval it it (e.g. if bool, number, or etc)
-            attempt = l
+            attempt = literal_eval(v)
+      
