@@ -30,4 +30,5 @@ def parse_args(config):
             attempt = literal_eval(v)
         except (SyntaxError, ValueError):
             # if that goes wrong, just use the string
-            att
+            attempt = v
+        setattr(conf
