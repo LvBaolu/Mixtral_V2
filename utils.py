@@ -28,4 +28,5 @@ def parse_args(config):
         try:
             # attempt to eval it it (e.g. if bool, number, or etc)
             attempt = literal_eval(v)
-        except (SyntaxError, ValueError)
+        except (SyntaxError, ValueError):
+            # if that goes wrong, 
