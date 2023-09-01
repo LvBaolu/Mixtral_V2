@@ -32,4 +32,7 @@ def parse_args(config):
             # if that goes wrong, just use the string
             attempt = v
         setattr(config, k, attempt)
-        p
+        print(f"--{k}:{v}")
+
+
+def debu
