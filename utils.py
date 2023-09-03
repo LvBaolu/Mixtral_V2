@@ -36,4 +36,4 @@ def parse_args(config):
 
 
 def debug_trainer_data(trainer: Trainer):
-    """
+    """Print a bunch of debug info
