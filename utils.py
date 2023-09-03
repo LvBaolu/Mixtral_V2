@@ -35,4 +35,5 @@ def parse_args(config):
         print(f"--{k}:{v}")
 
 
-def debu
+def debug_trainer_data(trainer: Trainer):
+    """
