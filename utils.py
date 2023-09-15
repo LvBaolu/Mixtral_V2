@@ -38,4 +38,5 @@ def parse_args(config):
 def debug_trainer_data(trainer: Trainer):
     """Print a bunch of debug info about how the packed dataset is being constructed.
     We set everythin to finite to avoid iterating forever"""
-    print("Computi
+    print("Computing Dataset Stats...")
+    train_d
