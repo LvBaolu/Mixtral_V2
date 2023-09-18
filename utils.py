@@ -42,4 +42,6 @@ def debug_trainer_data(trainer: Trainer):
     train_ds = trainer.train_dataset
     len_train_ds = sum(1 for _ in train_ds)
     print(
-        f"  len(train_ds): {len
+        f"  len(train_ds): {len_train_ds}\n"
+    )
+    train_dl = traine
