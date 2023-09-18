@@ -44,4 +44,5 @@ def debug_trainer_data(trainer: Trainer):
     print(
         f"  len(train_ds): {len_train_ds}\n"
     )
-    train_dl = traine
+    train_dl = trainer.get_train_dataloader()
+    train_dl.dataset
