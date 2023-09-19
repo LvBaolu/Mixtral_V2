@@ -45,4 +45,5 @@ def debug_trainer_data(trainer: Trainer):
         f"  len(train_ds): {len_train_ds}\n"
     )
     train_dl = trainer.get_train_dataloader()
-    train_dl.dataset
+    train_dl.dataset.infinite = False
+    len_train_dl = sum(1 f
