@@ -48,4 +48,6 @@ def debug_trainer_data(trainer: Trainer):
     train_dl.dataset.infinite = False
     len_train_dl = sum(1 for _ in train_dl)
     b = next(iter(train_dl))
-    input_ids, labels = 
+    input_ids, labels = b["input_ids"], b["labels"]
+    
+    print
