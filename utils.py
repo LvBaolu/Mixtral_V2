@@ -50,4 +50,5 @@ def debug_trainer_data(trainer: Trainer):
     b = next(iter(train_dl))
     input_ids, labels = b["input_ids"], b["labels"]
     
-    print
+    print(
+        f"  len(train_dl
