@@ -55,4 +55,5 @@ def debug_trainer_data(trainer: Trainer):
         f"  batch_shape  : {input_ids.shape}\n"
     )
     tokenizer = trainer.tokenizer
-    decoded_ids = tokenizer.
+    decoded_ids = tokenizer.decode(input_ids[0])[0:80]
+    decoded_la
