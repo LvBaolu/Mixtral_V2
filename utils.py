@@ -54,3 +54,4 @@ def debug_trainer_data(trainer: Trainer):
         f"  len(train_dl): {len_train_dl}\n"
         f"  batch_shape  : {input_ids.shape}\n"
     )
+    tokenizer = trainer.tokeni
