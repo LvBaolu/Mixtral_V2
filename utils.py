@@ -52,4 +52,5 @@ def debug_trainer_data(trainer: Trainer):
     
     print(
         f"  len(train_dl): {len_train_dl}\n"
-        f"  batch_shape  : {i
+        f"  batch_shape  : {input_ids.shape}\n"
+    )
