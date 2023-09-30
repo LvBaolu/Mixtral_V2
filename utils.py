@@ -56,4 +56,5 @@ def debug_trainer_data(trainer: Trainer):
     )
     tokenizer = trainer.tokenizer
     decoded_ids = tokenizer.decode(input_ids[0])[0:80]
-    decoded_labels = tokenizer.decode(labels[0
+    decoded_labels = tokenizer.decode(labels[0])[0:80]
+    print("First ba
