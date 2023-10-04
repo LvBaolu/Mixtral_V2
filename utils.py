@@ -59,4 +59,7 @@ def debug_trainer_data(trainer: Trainer):
     decoded_labels = tokenizer.decode(labels[0])[0:80]
     print("First batch:\n"
           f"input_ids:\n{decoded_ids}\n"
-          f"la
+          f"labels:\n{decoded_labels}\n")
+
+
+def
