@@ -62,4 +62,5 @@ def debug_trainer_data(trainer: Trainer):
           f"labels:\n{decoded_labels}\n")
 
 
-def
+def _prompt_no_input(row):
+    return ("Below
