@@ -63,4 +63,4 @@ def debug_trainer_data(trainer: Trainer):
 
 
 def _prompt_no_input(row):
-    return ("Below
+    return ("Below is an instruction that describes a 
