@@ -65,4 +65,4 @@ def debug_trainer_data(trainer: Trainer):
 def _prompt_no_input(row):
     return ("Below is an instruction that describes a task. "
             "Write a response that appropriately completes the request.\n\n"
-            "
+            "### Instruction:\n{instruction}\n\n### Respon
