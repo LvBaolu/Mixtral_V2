@@ -68,4 +68,4 @@ def _prompt_no_input(row):
             "### Instruction:\n{instruction}\n\n### Response:\n").format_map(row)
 
 def _prompt_input(row):
-    return (
+    return ("Below is an instruction that
