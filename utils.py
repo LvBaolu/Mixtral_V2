@@ -68,4 +68,5 @@ def _prompt_no_input(row):
             "### Instruction:\n{instruction}\n\n### Response:\n").format_map(row)
 
 def _prompt_input(row):
-    return ("Below is an instruction that describes a task, paired with an input that provides fur
+    return ("Below is an instruction that describes a task, paired with an input that provides further context. "
+            "Write a respons
