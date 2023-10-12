@@ -69,4 +69,4 @@ def _prompt_no_input(row):
 
 def _prompt_input(row):
     return ("Below is an instruction that describes a task, paired with an input that provides further context. "
-            "Write a respons
+            "Write a response that appropriately completes the 
