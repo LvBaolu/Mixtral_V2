@@ -72,4 +72,5 @@ def _prompt_input(row):
             "Write a response that appropriately completes the request.\n\n"
             "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n").format_map(row)
 
-def create_alpaca_prompt(r
+def create_alpaca_prompt(row):
+    return _prompt_no_input(
