@@ -75,4 +75,5 @@ def _prompt_input(row):
 def create_alpaca_prompt(row):
     return _prompt_no_input(row) if row["input"] == "" else _prompt_input(row)
 
-def create_alpaca_prompt_w
+def create_alpaca_prompt_with_response(row):
+    instruct = _p
