@@ -73,4 +73,6 @@ def _prompt_input(row):
             "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n").format_map(row)
 
 def create_alpaca_prompt(row):
-    return _prompt_no_input(row) if row["input"] == "" else _promp
+    return _prompt_no_input(row) if row["input"] == "" else _prompt_input(row)
+
+def create_alpaca_prompt_w
