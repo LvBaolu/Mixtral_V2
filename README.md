@@ -1,3 +1,3 @@
 # Mixtral_V2
 
-Project M
+Project Mixtral_V2 fine-tunes the Mix
