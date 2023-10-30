@@ -10,4 +10,4 @@ An optimized Docker image is available to run the code. You can build it or dire
 
 ## Run
 
-- You can execute
+- You can execute the `simple_inference.py` script to 
