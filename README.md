@@ -14,4 +14,4 @@ An optimized Docker image is available to run the code. You can build it or dire
 
 ## Train
 
-You can test your system setup by running the `simple_train.
+You can test your system setup by running the `simple_train.py` script. This will train a mod
