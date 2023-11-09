@@ -14,4 +14,8 @@ An optimized Docker image is available to run the code. You can build it or dire
 
 ## Train
 
-You can test your system setup by running the `simple_train.py` script. This will train a model on a small dataset, typically completing in about an ho
+You can test your system setup by running the `simple_train.py` script. This will train a model on a small dataset, typically completing in about an hour on an 8xH100 machine.
+
+## Axolotl
+
+Our
