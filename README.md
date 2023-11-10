@@ -18,4 +18,4 @@ You can test your system setup by running the `simple_train.py` script. This wil
 
 ## Axolotl
 
-Our experiments are conducted using the Axolotl library. A dedicated Docker image can be pulled from this repo for this purpose. It provides an
+Our experiments are conducted using the Axolotl library. A dedicated Docker image can be pulled from this repo for this purpose. It provides an execution environment for the `axolotl
