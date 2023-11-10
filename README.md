@@ -18,4 +18,4 @@ You can test your system setup by running the `simple_train.py` script. This wil
 
 ## Axolotl
 
-Our experiments are conducted usi
+Our experiments are conducted using the Axolotl library. A dedicated Docke
